@@ -1,0 +1,24 @@
+<style>
+body {
+  color: black;
+  background-image: url(background_3.jpg);    
+}
+
+h1 {
+  font-family: 'Arizonia', cursive;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Abril Fatface', cursive;
+}
+p, div, ul, li {
+    font-family: 'Cinzel', serif;
+}
+  footer{
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   text-align: center;
+  }
+</style>
