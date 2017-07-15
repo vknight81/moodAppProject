@@ -24,7 +24,7 @@ class QuoteForm extends Component {
     return (
       <div className="col-md-6 col-md-offset-3">
         <div style={styles.formStyle} className="form-group">
-          <label htmlFor="input-box">
+          <label htmlFor="input-box"> 
           </label>
           <textarea
             style={{
@@ -32,7 +32,7 @@ class QuoteForm extends Component {
             }}
             onChange={this.handleInputChange}
             value={this.state.inputValue}
-            placeholder="Add a new quote here!"
+            placeholder="Log your daily thoughts here!"
             className="form-control"
             id="input-box"
             rows="3"
