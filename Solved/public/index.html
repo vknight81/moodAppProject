@@ -6,6 +6,7 @@
 	<!-- Here we include bootstrap and font-awesome. These will be made available to all of the generated HTML/JS that React generates-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/paper/bootstrap.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link rel="stylesheet" href="/css/style.css">
 	<style type="text/css">
   .container {
@@ -19,26 +20,28 @@
     height: 375px;
     text-align: center;
   }
+  #mainRightBorder{
+    border-left: 1px solid gray;
+    overflow-y: visible;
+  }
   #moodSelector{
     text-align: center;
   }
-  #mainBorder{
-    border-right: 1px solid gray;
-    border-bottom: 1px solid gray;
-  }
-  #mainRightBorder{
-    border-bottom: 1px solid gray;
-  }
  footer{
-   position:absolute;
+   position:fixed;
    bottom:0;
    width:100%;
-   height:60px;   /* Height of the footer */
+   height:50px; 
    text-align: center;
+   background-color: black;
+   color: white;
   }
   .third{
     height: 150px;
     text-align: center;
+  }
+  .rightBorder{
+    border-right: 1px solid gray;
   }
    .navbar{
     background-color: #993366;

@@ -22,6 +22,7 @@ class Home extends Component {
       this.setState({ quotes: res.data });
     });
   }
+
   // A helper method for rendering one panel for each quote
   renderQuotes() {
     return this.state.quotes.map(quote => (
@@ -37,66 +38,42 @@ class Home extends Component {
 <div className="container-fluid">
       
       
-      <div className="row1">
-        <div className="col-lg-3">
+      <div className="row">
+        <div className="col-lg-2">
           <h1></h1> 
         </div>
-        <div className="col-lg-6" id="moodSelector">
+        <div className="col-lg-8" id="moodSelector">
           {//mood picker feature goes here}
-          <h1>What color is your Mood?</h1>
-
+          <h2>What color is MyMood?</h2>
           }
         </div>
-        <div className="col-lg-3">
+        <div className="col-lg-2">
           <h1></h1> 
         </div>
       </div>
 
  
-      <div className="row2">
-
-        
-
+      <div className="row">
         <div className="col-lg-8 main" id="mainBorder"> 
-          
             <div className="row">
               <QuoteForm getQuotes={this.getQuotes} />
+            </div>
         </div>
-        
-        </div>
-        
-
-        
         <div className="col-lg-4 main" id="mainRightBorder">
-            
-             <div className="row">
-          <hr />
+          <h5>My Diary</h5>
           {this.renderQuotes()}
-        </div>
+        </div>         
       </div>
-    </div>
 
-
-     
-      <div className="row3" id="topBorder">
-        
-        
-
-        <div className="col-lg-4 third">
-          <h3>Current Friends Button</h3>
-        </div>
-        <div className="col-lg-4 third">
-          <h3>Add MoodApp Friends Button</h3>
-        </div>
-        <div className="col-lg-4 third">
-          <h3>Invite New Friends to MoodApp Button</h3>
+      <div className="row">
+        <div className="col-lg-12 main" id="mainBorder"> 
+            <div className="row">
+            <h3>MyMood Now</h3>
+            </div>
+        </div>       
       </div>
- 
-      </div>
-  </div>
-  
 
-
+</div>
     );
   }
 }
