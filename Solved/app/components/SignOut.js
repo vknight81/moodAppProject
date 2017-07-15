@@ -13,7 +13,6 @@ class signOut extends Component {
         </div>
         <div className="container">
         <div className="row">
-          {this.renderQuotes()}
         </div>
         </div>
       </div>

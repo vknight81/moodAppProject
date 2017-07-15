@@ -5,7 +5,7 @@ const Navbar = () => (
   <nav style={{ marginBottom: 0 }} className="navbar navbar-inverse">
     <div className="container-fluid">
       <div className="navbar-header">
-        <Link className="navbar-brand" to="/">Mood App</Link>
+        <Link className="navbar-brand" to="/">MyMood</Link>
       </div>
       <ul className="nav navbar-nav navbar-left">
         <li className={location.pathname === "/" && "active"}>
@@ -16,8 +16,8 @@ const Navbar = () => (
         </li>
       </ul>
       <ul className="nav navbar-nav navbar-right">
-        <li className={location.pathname === "/sign_out" && "active"}>
-          <Link to="/favorites">Sign Out</Link>
+        <li className={location.pathname === "/signOut" && "active"}>
+          <Link to="/signOut">Sign Out</Link>
         </li>
       </ul>
     </div>

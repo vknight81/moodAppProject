@@ -12,11 +12,19 @@ class Panel extends Component {
   deleteQuote(id) {
     API.deleteQuote(id).then(this.props.getQuotes);
   }
+  //TODO create a new method above and change the method favoriteQuote below in the first onclick event under className to switch to corresponding user's profile
   render() {
     return (
-      <div className="col-md-3 col-sm-6">
-        <div className="panel panel-default">
+      <div className="col-md-12 col-sm-12 col-lg-12">
+        <div className="panel panel-default animated fadeInDown">
           <div className="panel-body">
+
+            <i
+              onClick={() => this.favoriteQuote(this.props.quote)}
+              style={styles.photoStyle}
+              className="fa fa-user"
+              aria-hidden="true"
+            />
             <i
               onClick={() => this.favoriteQuote(this.props.quote)}
               style={styles.favoriteStyle}
@@ -38,14 +46,19 @@ class Panel extends Component {
 }
 
 const styles = {
+  photoStyle: {
+    cursor: "pointer",
+    marginLeft: 5,
+    float: "left"
+  },
   favoriteStyle: {
     cursor: "pointer",
     marginRight: 5,
-    float: "left"
+    float: "right"
   },
   deleteStyle: {
     cursor: "pointer",
-    marginLeft: 5,
+    marginRight: 5,
     color: "red",
     float: "right"
   }
