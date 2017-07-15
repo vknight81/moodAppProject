@@ -18,7 +18,19 @@ const API = {
     quote.favorited = !quote.favorited;
     const { _id, favorited } = quote;
     return axios.patch(`/api/quotes/${_id}`, { favorited });
-  }
+  },
+    // Retrieves all users from the db
+  getUsers: function() {
+    return axios.get("/api/users");
+  },
+  // Saves a new user to the db
+  saveUser: function(text) {
+    return axios.post("/api/users", { text });
+  },
+  // Deletes a user from the db
+  deleteUser: function(id) {
+    return axios.delete(`/api/users/${id}`);
+  },
 };
 
 export default API;
