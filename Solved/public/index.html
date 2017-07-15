@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LearnReact!</title>
+	<!-- Here we include bootstrap and font-awesome. These will be made available to all of the generated HTML/JS that React generates-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/paper/bootstrap.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<style type="text/css">
+  .container {
+    border: 0px solid;
+    font-style: sans-serif;
+  }
+  div{
+    border: 0px solid;
+  }
+  .main{
+    height: 375px;
+    text-align: center;
+  }
+  #moodSelector{
+    text-align: center;
+  }
+  #mainBorder{
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+  }
+  #mainRightBorder{
+    border-bottom: 1px solid gray;
+  }
+ footer{
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   text-align: center;
+  }
+  .third{
+    height: 150px;
+    text-align: center;
+  }
+   .navbar{
+    background-color: #993366;
+  }
+  a{
+    color: white;
+  }
+</style>
+
+</head>
+
+<body>
+	
+	<!-- This is where React will deploy the contents it generates -->
+	<div id="app"></div>
+
+	<!-- All of our JS code will be transpiled into this bundle.js file -->
+	<script src="bundle.js"></script>
+	
+</body>
+</html>
