@@ -7,7 +7,8 @@ var quoteSchema = new Schema({
   favorited: {
     type: Boolean,
     default: false
-  }
+  },
+  mood: Number
 });
 
 var Quote = mongoose.model("Quote", quoteSchema);

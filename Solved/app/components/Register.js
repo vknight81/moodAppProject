@@ -5,7 +5,9 @@ class register extends Component {
   constructor() {
     super();
     this.state = {
-      inputValue: ""
+      inputUser: "",
+      inputEmail: "",
+      inputPassword: ""
     };
     // Binding handleInputChange and handleButtonClick since we'll be passing them as
     // callbacks and 'this' will change otherwise
@@ -13,22 +15,28 @@ class register extends Component {
     this.handleButtonClick = this.handleButtonClick.bind(this);
   }
   handleInputChange(event) {
-    this.setState({ inputValue: event.target.value });
+    const name = event.target.name;
+    this.setState({ [name]: event.target.value });
   }
+  
   handleButtonClick() {
-    const newUser = this.state.inputValue;
-    API.saveUser(newUser).then(this.props.getUser);
-    this.setState({ inputValue: "" });
+    const newUser = this.state;
+    console.log(newUser);
+    //API.saveUser(newUser).then(this.props.getUsers);
+    this.setState({ inputUser: "" });
+    this.setState({ inputEmail: "" });
+    this.setState({ inputPassword: "" });
   }
   render() {
     return (
-      <div className="col-md-12">
+      <div className="col-md-4">
         <div style={styles.formStyle} className="form-group">
           <label htmlFor="username">Username:</label>
           <textarea
             style={{resize: "none"}}
+            name= "inputUser"
             onChange={this.handleInputChange}
-            value={this.state.inputValue}
+            value={this.state.inputUser}
             placeholder="Username"
             className="form-control"
             id="username"
@@ -39,8 +47,9 @@ class register extends Component {
           <label htmlFor="email">Email Address:</label>
           <textarea
             style={{resize: "none"}}
+            name= "inputEmail"
             onChange={this.handleInputChange}
-            value={this.state.inputValue}
+            value={this.state.inputEmail}
             placeholder="Email Address"
             className="form-control"
             id="email"
@@ -51,8 +60,9 @@ class register extends Component {
           <label htmlFor="password">Password:</label>
           <textarea
             style={{resize: "none"}}
+            name= "inputPassword"
             onChange={this.handleInputChange}
-            value={this.state.inputValue}
+            value={this.state.inputPassword}
             placeholder="Password"
             className="form-control"
             id="password"
@@ -66,14 +76,13 @@ class register extends Component {
           >
             Submit
           </button>
-        
       </div>
     );
   }
 }
 
-const styles = {
-  buttonStyle: {
+const styles={
+ buttonStyle: {
     float: "right",
     marginTop: 10
   },

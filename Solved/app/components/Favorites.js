@@ -36,7 +36,7 @@ class Favorites extends Component {
     return (
       <div>
         <div className="jumbotron text-center">
-          <h1>Your Favorite Comments</h1>
+          <h1>Public Diary Posts</h1>
           <p>Stay Motivated!</p>
         </div>
         <div className="container">
