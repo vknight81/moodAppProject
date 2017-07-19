@@ -5,11 +5,11 @@ const Navbar = () => (
   <nav style={{ marginBottom: 0 }} className="navbar navbar-inverse">
     <div className="container-fluid">
       <div className="navbar-header">
-        <Link className="navbar-brand" to="/">MyMood</Link>
+        <Link className="navbar-brand" to="/home">MyMood</Link>
       </div>
       <ul className="nav navbar-nav navbar-left">
-        <li className={location.pathname === "/" && "active"}>
-          <Link to="/">Home</Link>
+        <li className={location.pathname === "/home" && "active"}>
+          <Link to="/home">Home</Link>
         </li>
         <li className={location.pathname === "/favorites" && "active"}>
           <Link to="/favorites">Public</Link>
