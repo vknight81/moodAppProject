@@ -18,14 +18,12 @@ class register extends Component {
     const name = event.target.name;
     this.setState({ [name]: event.target.value });
   }
-  
+
   handleButtonClick() {
     const newUser = this.state;
     console.log(newUser);
-    //API.saveUser(newUser).then(this.props.getUsers);
+    API.saveUser(newUser).then(this.props.getUsers);
     this.setState({ inputUser: "" });
-    this.setState({ inputEmail: "" });
-    this.setState({ inputPassword: "" });
   }
   render() {
     return (

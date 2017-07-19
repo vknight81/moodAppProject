@@ -44,7 +44,6 @@ class myDiary extends Component {
         </div>
         <div className="col-lg-8" id="moodSelector">
           <h2>What color is MyMood?</h2>
-          }
         </div>
         <div className="col-lg-2">
           <h1></h1> 
