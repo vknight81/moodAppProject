@@ -24,7 +24,7 @@ class Home extends Component {
   }
   getQuotes() {
     API.getQuotes().then((res) => {
-      this.setState({ quotes: res.data });
+      this.setState({ quotes: res.data.reverse() });
     });
   }
 
@@ -44,20 +44,14 @@ class Home extends Component {
       
       
       <div className="row">
-        <div className="col-lg-2">
-          <h1></h1> 
-        </div>
-        <div className="col-lg-8" id="moodSelector">
-          <h2>What color is MyMood?</h2>
-        </div>
-        <div className="col-lg-2">
-          <h1></h1> 
+        <div className="col-lg-12" id="moodSelector">
+          <h1>What color is MyMood?</h1>
         </div>
       </div>
 
  
       <div className="row">
-        <div className="col-lg-8 main" id="mainBorder">
+        <div className="col-lg-8 main main-section" id="mainBorder">
           <StyleRoot>
             <Coverflow
               displayQuantityOfSide={2}
@@ -66,45 +60,47 @@ class Home extends Component {
               active={0}
               media={{
                 '@media (max-width: 900px)': {
-                  width: '800px',
+                  width: '900px',
                   height: '375px'
                 },
                 '@media (min-width: 900px)': {
-                  width: '800px',
+                  width: '900px',
                   height: '375px'
                 }
               }}
               >
-              <img src='images/album-1.png' alt='Happy' data-action="https://facebook.github.io/react/"/>
-              <img src='images/album-2.png' alt='Sad' data-action="http://passer.cc"/>
-              <img src='images/album-3.png' alt='Anxious' data-action="https://doce.cc/"/>
-              <img src='images/album-4.png' alt='Exhausted' data-action="http://tw.yahoo.com"/>
+              <img src='../public/css/happy_pic.jpg' alt='Happy' data-action="https://facebook.github.io/react/" />
+              <img src='../public/css/sad_pic.jpg' alt='Sad' data-action="http://passer.cc"/>
+              <img src='../public/css/curious_pic.jpg' alt='Curious' data-action="https://doce.cc/"/>
+              <img src='../public/css/evil_pic.jpg' alt='Evil' data-action="http://tw.yahoo.com"/>
+              <img src='../public/css/indifferent_pic.jpg' alt='Indifferent' data-action="http://tw.yahoo.com"/>
+              <img src='../public/css/exhausted_pic.jpg' alt='Exhausted' data-action="http://tw.yahoo.com"/>
             </Coverflow>
           </StyleRoot>
             
             {document.querySelector('#mainBorder')}
           
-          </div>
+        </div>
           
-           
-        <div className="col-lg-4 main" id="mainRightBorder">
-          <h5>My Diary</h5>
+      <div>  
+        <div className="col-lg-4 main main-section" id="mainRightBorder">
+          <h3>My Diary</h3>
           {this.renderQuotes()}
         </div>         
       </div>
-      
-
-
-      <div className="row">
-        <div className="col-lg-12 main" id="mainBorder"> 
-            <div className="row">
-            <h3>MyMood Now</h3>
-            </div>
-        </div>       
       </div>
 
+
+       <div className="row">
+        <div className="col-lg-12 main" id="bottomSection">
+          <div className="row">
+           <h3>Quote of the Day</h3>
+          <h4>Happiness is a journey, not a destination.</h4>
+          </div>
+        </div>       
+      </div>
 </div>
-    );
+    )
   }
 }
 

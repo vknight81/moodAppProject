@@ -9,7 +9,7 @@ var quoteSchema = new Schema({
     default: false
   },
   mood: Number
-});
+}, {timestamps:true}); //{timestamps:true} inserts date and time
 
 var Quote = mongoose.model("Quote", quoteSchema);
 
