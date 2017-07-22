@@ -69,12 +69,12 @@ class Home extends Component {
                 }
               }}
               >
-              <img src='../css/happy_pic.png'  alt='Happy' data-action="https://facebook.github.io/react/" />
-              <img src='../css/sad_pic.png' alt='Sad' data-action="http://passer.cc"/>
+              <img src='../css/happy_pic.png'  alt='Happy' data-action="https://capitalxtra.com" />
+              <img src='../css/sad_pic.png' alt='Sad' data-action="https://www.values.com"/>
               <img src='../css/curious_pic.png' alt='Curious' data-action="https://doce.cc/"/>
               <img src='../css/evil_pic.png' alt='Evil' data-action="http://tw.yahoo.com"/>
               <img src='../css/indifferent_pic.png' alt='Indifferent' data-action="http://tw.yahoo.com"/>
-              <img src='../css/exhausted_pic.png' alt='Exhausted' data-action="http://tw.yahoo.com"/>
+              <img src='../css/exhausted_pic.png' alt='Exhausted' data-action="https://ladanspa.com"/>
             </Coverflow>
           </StyleRoot>
             
