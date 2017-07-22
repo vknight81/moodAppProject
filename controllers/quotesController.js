@@ -10,7 +10,7 @@ module.exports = {
     else {
       query = req.params.id ? { _id: req.params.id } : {};
     }
-    Quote.find(query)
+    Quote.find(query).sort('-date').exec()
       .then(function(doc) {
         res.json(doc);
       }).catch(function(err) {

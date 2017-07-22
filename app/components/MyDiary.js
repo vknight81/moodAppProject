@@ -19,7 +19,8 @@ class myDiary extends Component {
   }
   getQuotes() {
     API.getQuotes().then((res) => {
-      this.setState({ quotes: res.data });
+      console.log(res.data);
+      this.setState({ quotes: res.data.reverse() });
     });
   }
 
@@ -39,36 +40,33 @@ class myDiary extends Component {
       
       
       <div className="row">
-        <div className="col-lg-2">
-          <h1></h1> 
-        </div>
-        <div className="col-lg-8" id="moodSelector">
-          <h2>What color is MyMood?</h2>
-        </div>
-        <div className="col-lg-2">
-          <h1></h1> 
+        <div className="col-lg-12" id="moodSelector">
+          <h1>What color is MyMood?</h1>
         </div>
       </div>
 
  
       <div className="row">
-        <div className="col-lg-8 main" id="mainBorder">
+        <div className="col-lg-8 main main-section" id="mainBorder">
            <QuoteForm getQuotes={this.getQuotes} />
         </div>
-        <div className="col-lg-4 main" id="mainRightBorder">
-          <h5>My Diary</h5>
+        <div className="col-lg-4 main main-section" id="mainRightBorder">
+          <h3>My Diary</h3>
           {this.renderQuotes()}
         </div>         
       </div>
       
 
       <div className="row">
-        <div className="col-lg-12 main" id="mainBorder"> 
-            <h3>MyMood Now</h3>
+        <div className="col-lg-12 main" id="bottomSection">
+          <div className="row">
+           <h3>Quote of the Day</h3>
+          <h4>Happiness is a journey, not a destination.</h4>
+          </div>
         </div>       
       </div>
   </div>
-    );
+    )
   }
 }
 
