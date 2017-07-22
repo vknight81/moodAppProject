@@ -21,9 +21,8 @@ class register extends Component {
 
   handleButtonClick() {
     const newUser = this.state;
-    console.log(newUser);
     API.saveUser(newUser).then(this.props.getUsers);
-    this.setState({ inputUser: "" });
+    this.setState({ inputUser: "" , inputEmail: "", inputPassword: ""});
   }
   render() {
     return (

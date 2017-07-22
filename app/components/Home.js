@@ -69,12 +69,12 @@ class Home extends Component {
                 }
               }}
               >
-              <img src='../public/css/happy_pic.jpg' alt='Happy' data-action="https://facebook.github.io/react/" />
-              <img src='../public/css/sad_pic.jpg' alt='Sad' data-action="http://passer.cc"/>
-              <img src='../public/css/curious_pic.jpg' alt='Curious' data-action="https://doce.cc/"/>
-              <img src='../public/css/evil_pic.jpg' alt='Evil' data-action="http://tw.yahoo.com"/>
-              <img src='../public/css/indifferent_pic.jpg' alt='Indifferent' data-action="http://tw.yahoo.com"/>
-              <img src='../public/css/exhausted_pic.jpg' alt='Exhausted' data-action="http://tw.yahoo.com"/>
+              <img src='../css/happy_pic.png'  alt='Happy' data-action="https://facebook.github.io/react/" />
+              <img src='../css/sad_pic.png' alt='Sad' data-action="http://passer.cc"/>
+              <img src='../css/curious_pic.png' alt='Curious' data-action="https://doce.cc/"/>
+              <img src='../css/evil_pic.png' alt='Evil' data-action="http://tw.yahoo.com"/>
+              <img src='../css/indifferent_pic.png' alt='Indifferent' data-action="http://tw.yahoo.com"/>
+              <img src='../css/exhausted_pic.png' alt='Exhausted' data-action="http://tw.yahoo.com"/>
             </Coverflow>
           </StyleRoot>
             
